@@ -2,3 +2,11 @@
 0:0:0:0:0:0:0:1 - - [26/Dec/2017:14:28:51 +0800] "GET /springmvc_hibernate_maven/ HTTP/1.1" 200 57 http-bio-8080-exec-3 1762
 0:0:0:0:0:0:0:1 - - [26/Dec/2017:14:28:51 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
 0:0:0:0:0:0:0:1 - - [26/Dec/2017:14:29:10 +0800] "GET /springmvc_hibernate_maven/ HTTP/1.1" 200 62 http-bio-8080-exec-5 189
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:15:36:29 +0800] "GET /springmvc_hibernate_maven HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:15:41:12 +0800] "GET /springmvc_hibernate_maven HTTP/1.1" 404 - http-bio-8080-exec-5 0
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:16:51:26 +0800] "GET /springmvc_hibernate_maven HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:16:51:27 +0800] "GET /springmvc_hibernate_maven/ HTTP/1.1" 200 62 http-bio-8080-exec-2 486
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:16:58:19 +0800] "GET /springmvc_hibernate_maven/ HTTP/1.1" 200 62 http-bio-8080-exec-1 419
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:16:58:20 +0800] "GET /springmvc_hibernate_maven/ HTTP/1.1" 200 62 http-bio-8080-exec-2 2
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:16:58:34 +0800] "GET /springmvc_hibernate_maven/ HTTP/1.1" 200 68 http-bio-8080-exec-3 1865
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:16:58:34 +0800] "GET /springmvc_hibernate_maven/ HTTP/1.1" 200 68 http-bio-8080-exec-4 150
