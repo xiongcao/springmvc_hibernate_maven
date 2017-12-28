@@ -38,6 +38,42 @@
     </mvc:annotation-driven>
     <!--扫描包-->
     <context:component-scan base-package="com.ssh.*"/>
+    
+    <!-- <aop:config>
+		<aop:pointcut expression="execution(* com.ssh.service.impl.*.*(..))" id="bizMethods" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="bizMethods" />
+
+		<aop:aspect ref="exceptionHandler">
+			<aop:pointcut id="exceptionService" expression="execution(* com.ssh.*(..))" />
+			<aop:pointcut id="exceptionService" expression="execution(* com.ssh.service.*.*()) and args(request,response,handler)" />
+			<aop:after-throwing pointcut-ref="exceptionService" method="resolveException" throwing="ex" />
+		</aop:aspect>
+	</aop:config> -->
+	
+	<!-- Mail Start -->
+	<!-- 加载属性配置文件 -->
+	<context:property-placeholder location="classpath*:properties/**.properties" ignore-unresolvable="true" />
+
+	<bean class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="${mail.host.163}" />
+		<property name="port">
+			<value>25</value>
+		</property>
+		<property name="username" value="${mail.username}" />
+		<property name="password" value="${mail.password}" />
+
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+				<prop key="mail.smtp.timeout">${mail.smtp.timeout}</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- Mail End -->
+	<!-- <bean class="com.ssh.util.XMLConstants" lazy-init="default">
+		<property name="isAllSecurityQuestion" value="${isAllSecurityQuestion}"></property>
+	</bean> -->
+    
 
     <!-- 定义视图解析器 -->
     <!-- prefix和suffix：查找视图页面的前缀和后缀（前缀[逻辑视图名]后缀），比如传进来的逻辑视图名为hello， 则该该jsp视图页面应该存放在“/WEB-INF/page/hello.jsp”； order需要比其他配置的order大-->

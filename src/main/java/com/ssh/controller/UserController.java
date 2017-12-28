@@ -2,8 +2,6 @@ package com.ssh.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +20,7 @@ public class UserController {
 	
 	@ResponseBody()
 	@RequestMapping(value = "/findUserList")
-	public ModelAndView findUserList(HttpServletRequest request){
+	public ModelAndView findUserList(){
 		ModelAndView modelAndView = new ModelAndView("user/user");
 		List<User> users = userService.findUserList();
 		for (User user : users) {

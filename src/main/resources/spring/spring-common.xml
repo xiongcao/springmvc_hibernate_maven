@@ -73,6 +73,14 @@
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    
+    <!-- create job-meta tables automatically -->
+	<!-- <jdbc:initialize-database data-source="dataSource"> -->
+	<!-- 删除整个数据库勿动 -->
+	<!-- <jdbc:script location="classpath*:sql/schema-drop-user-mysql.sql" /> -->
+	<!-- 重新执行sql脚本创建数据库 -->
+	<!-- <jdbc:script location="classpath*:sql/schema-user-mysql.sql" /> -->
+	<!-- </jdbc:initialize-database> -->
 
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
@@ -83,4 +91,20 @@
             <tx:method name="*" propagation="SUPPORTS" read-only="true"/>
         </tx:attributes>
     </tx:advice>
+    
+    <!-- <aop:config> -->
+	<!-- <aop:pointcut expression="execution(* com.kxlist.user.service.impl.*.*(..))" id="bizMethods" /> -->
+	<!-- <aop:advisor advice-ref="txAdvice" pointcut-ref="bizMethods" /> -->
+	<!-- </aop:config> -->
+
+	<!-- solr -->
+	<!-- <context:property-placeholder location="classpath*:properties/solr.properties" ignore-unresolvable="true" />
+	配置solr服务器的地址
+	<bean class="org.apache.solr.client.solrj.impl.HttpSolrClient">
+		<constructor-arg value="${solr_ip}"></constructor-arg>
+	</bean>
+
+	<bean class="com.kxlist.user.bean.BaseSolrUrl">
+		<constructor-arg value="${solr_ip}"></constructor-arg>
+	</bean> -->
 </beans>

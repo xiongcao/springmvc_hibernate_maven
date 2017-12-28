@@ -24,7 +24,7 @@ public class HibernateDaoImpl<T> implements IHibernateDao<T> {
 
     @Override
     public Session getCurrentSession() {
-        return session.getCurrentSession();
+        return session.openSession();
     }
 
     @Override
