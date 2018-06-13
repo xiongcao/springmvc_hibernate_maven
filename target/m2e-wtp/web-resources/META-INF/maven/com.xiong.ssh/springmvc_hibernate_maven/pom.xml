@@ -146,7 +146,12 @@
 			<artifactId>druid</artifactId>
 			<version>1.0.23</version>
 		</dependency>
-
+		<!-- Java类转xml -->
+		<dependency>
+		    <groupId>com.thoughtworks.xstream</groupId>
+		    <artifactId>xstream</artifactId>
+		    <version>1.4.10</version>
+		</dependency>
 		<!--html页面跳转 -->
 		<dependency>
 			<groupId>org.freemarker</groupId>
