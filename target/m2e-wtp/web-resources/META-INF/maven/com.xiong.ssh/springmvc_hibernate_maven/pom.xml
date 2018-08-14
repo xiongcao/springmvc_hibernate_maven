@@ -140,6 +140,13 @@
 			<artifactId>mail</artifactId>
 			<version>1.4.7</version>
 		</dependency>
+		<!-- 处理跨域请求 -->
+		<dependency>
+		    <groupId>com.thetransactioncompany</groupId>
+		    <artifactId>cors-filter</artifactId>
+		    <version>2.6</version>
+		</dependency>
+				
 		<!-- 阿里数据库连接池 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -153,7 +160,6 @@
 			<artifactId>freemarker</artifactId>
 			<version>2.3.22</version>
 		</dependency>
-		
 		<dependency>  
 		    <groupId>jdk.tools</groupId>  
 		    <artifactId>jdk.tools</artifactId>  
