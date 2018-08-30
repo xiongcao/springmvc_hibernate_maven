@@ -14,7 +14,9 @@ public class User{
 	@GenericGenerator(name = "id",strategy="identity")
 	private Integer id;
 	private String name;
-	private String password;	
+	private String password;
+//	@Column(name = "status",nullable = false,columnDefinition="Integer default 1") 
+	private Integer status;
 	@Column(name="login_date")
 	private String loginDate;
 	public Integer getId() {
@@ -41,10 +43,16 @@ public class User{
 	public void setLoginDate(String loginDate) {
 		this.loginDate = loginDate;
 	}
+	public Integer getStatus() {
+		return status;
+	}
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", password=" + password
-				+ ", loginDate=" + loginDate + "]";
+		return "User [id=" + id + ", name=" + name + ", password=" + password + ", status=" + status + ", loginDate="
+				+ loginDate + "]";
 	}
 	
 }
