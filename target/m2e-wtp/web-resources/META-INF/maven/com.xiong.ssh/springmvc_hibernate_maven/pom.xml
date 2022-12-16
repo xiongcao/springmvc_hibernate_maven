@@ -193,7 +193,7 @@
 		</plugins>
 	</build>
 	<properties>
-		<springversion>4.2.5.RELEASE</springversion>
+		<springversion>5.2.20.RELEASE</springversion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<sonar.languages>java,javascript,web</sonar.languages>
